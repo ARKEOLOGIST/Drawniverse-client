@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    gap: 10px;
+}
+
+.tool-section {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 5px;
+    border-right: 1px solid #ccc;
+}
+
+.tool-button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #999;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.tool-button:hover {
+    background-color: #e0e0e0;
+}
+
+.tool-button.active {
+    background-color: #c0c0c0;
+}
+
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    width: 150px;
+}
+
+.color-swatch {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+}
+
+.color-swatch.active {
+    border: 2px solid #000;
+    transform: scale(1.1);
+}
+
+#size-slider {
+    width: 100px;
+}
+
+.canvas-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+#drawing-canvas {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: crosshair;
+}
+
+.eraser-cursor {
+    cursor: none;
+} 

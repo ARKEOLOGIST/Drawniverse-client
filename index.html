@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electron Paint</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="toolbar">
+        <div class="tool-section">
+            <button id="pencil" class="tool-button active" title="Pencil">✏️</button>
+            <button id="eraser" class="tool-button" title="Eraser">🧹</button>
+        </div>
+        <div class="tool-section">
+            <div class="color-palette">
+                <div class="color-swatch" style="background-color: #000000;" data-color="#000000"></div>
+                <div class="color-swatch" style="background-color: #FFFFFF;" data-color="#FFFFFF"></div>
+                <div class="color-swatch" style="background-color: #FF0000;" data-color="#FF0000"></div>
+                <div class="color-swatch" style="background-color: #00FF00;" data-color="#00FF00"></div>
+                <div class="color-swatch" style="background-color: #0000FF;" data-color="#0000FF"></div>
+                <div class="color-swatch" style="background-color: #FFFF00;" data-color="#FFFF00"></div>
+                <div class="color-swatch" style="background-color: #FF00FF;" data-color="#FF00FF"></div>
+                <div class="color-swatch" style="background-color: #00FFFF;" data-color="#00FFFF"></div>
+                <div class="color-swatch" style="background-color: #FFA500;" data-color="#FFA500"></div>
+                <div class="color-swatch" style="background-color: #800080;" data-color="#800080"></div>
+            </div>
+            <input type="range" id="size-slider" min="1" max="50" value="1">
+        </div>
+        <div class="tool-section">
+            <button id="save" class="tool-button" title="Save">💾</button>
+        </div>
+    </div>
+    
+    <div class="canvas-container">
+        <canvas id="drawing-canvas"></canvas>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html> 
